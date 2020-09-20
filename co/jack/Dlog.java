@@ -1,6 +1,5 @@
 package co.jack;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -15,6 +14,8 @@ public class Dlog {
     final static int DEBUG_DISABLE_CHECKED = 0;
     final static int DEBUG_ENABLE = 1;
     static int DEBUG = DEBUG_DISABLE_UNCHECKED;
+
+    static boolean TRACE = true;
 
     public static int  isDebuggable() {
         if(DEBUG == DEBUG_DISABLE_UNCHECKED) {
@@ -75,6 +76,14 @@ public class Dlog {
      **/
     public static final void v(String message) {
         if (isDebuggable() == DEBUG_ENABLE) Log.v(TAG, buildLogMsg(message));
+    }
+
+    /**
+     * Trace Log Msg
+     **/
+    public static final void t() {
+        Log.d("dafdadaf", "!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        if(TRACE) Log.i(TAG, buildLogMsg(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"));
     }
 
 
