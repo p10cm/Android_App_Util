@@ -82,7 +82,6 @@ public class Dlog {
      * Trace Log Msg
      **/
     public static final void t() {
-        Log.d("dafdadaf", "!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         if(TRACE) Log.i(TAG, buildLogMsg(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"));
     }
 
